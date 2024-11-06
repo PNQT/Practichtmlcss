@@ -6,9 +6,8 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 4rem;
-  margin: 0 auto ;
-  width:var(--width-value);
-
+  margin: 0 auto;
+  width: var(--width-value);
 
   &_header {
     display: flex;
@@ -70,69 +69,57 @@
     align-items: flex-start;
     gap: 2rem;
     align-self: stretch;
-
-    
   }
 }
 .card {
+  display: flex;
+  height: 35.9375rem;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+  border: none;
+
+  img {
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 2rem 2rem 0rem 0rem;
+  }
+
+  &_content {
     display: flex;
-    height: 35.9375rem;
+    padding: 2rem;
     flex-direction: column;
     align-items: flex-start;
-    flex: 1 0 0;
-    border: none;
+    gap: 2rem;
+    align-self: stretch;
+    border-radius: 0rem 0rem 2rem 2rem;
+    background: #fff;
+    box-shadow: 0px 801px 224px 0px rgba(0, 0, 0, 0),
+      0px 513px 205px 0px rgba(0, 0, 0, 0.01), 0px 288px 173px 0px rgba(0, 0, 0, 0.03),
+      0px 128px 128px 0px rgba(0, 0, 0, 0.04), 0px 32px 71px 0px rgba(0, 0, 0, 0.05),
+      0px 0px 0px 0px rgba(0, 0, 0, 0.05);
 
-    img {
-      flex: 1 0 0;
-      align-self: stretch;
-      border-radius: 2rem 2rem 0rem 0rem;
-    }
-
-    &_content {
+    &_derc {
       display: flex;
-      padding: 2rem;
       flex-direction: column;
       align-items: flex-start;
-      gap: 2rem;
+      gap: 1rem;
       align-self: stretch;
-      border-radius: 0rem 0rem 2rem 2rem;
-      background: #fff;
-      box-shadow: 0px 801px 224px 0px rgba(0, 0, 0, 0),
-        0px 513px 205px 0px rgba(0, 0, 0, 0.01), 0px 288px 173px 0px rgba(0, 0, 0, 0.03),
-        0px 128px 128px 0px rgba(0, 0, 0, 0.04), 0px 32px 71px 0px rgba(0, 0, 0, 0.05),
-        0px 0px 0px 0px rgba(0, 0, 0, 0.05);
 
-      &_derc {
+      &_1 {
         display: flex;
-        flex-direction: column;
         align-items: flex-start;
-        gap: 1rem;
         align-self: stretch;
 
-        &_1 {
-          display: flex;
-          align-items: flex-start;
-          align-self: stretch;
-
-          .where {
-            flex: 1 0 0;
-            font-family: "Circular Std";
-            font-size: 1.4375rem;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 120%;
-          }
-          .cost {
-            color: var(--Secondary, #f85e9f);
-            /* H6 */
-            font-family: "Circular Std";
-            font-size: 1.4375rem;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 120%;
-          }
+        .where {
+          flex: 1 0 0;
+          font-family: "Circular Std";
+          font-size: 1.4375rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 120%;
         }
-        &_2 {
+        .cost {
           color: var(--Secondary, #f85e9f);
           /* H6 */
           font-family: "Circular Std";
@@ -142,19 +129,92 @@
           line-height: 120%;
         }
       }
+      &_2 {
+        color: var(--Secondary, #f85e9f);
+        /* H6 */
+        font-family: "Circular Std";
+        font-size: 1.4375rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+      }
     }
   }
-  .card_content_star{
-    display: flex;
-align-items: center;
-gap: 0.5rem;
-.number{
-    color: var(--Orange, #FF5722);
-/* H6 */
-font-family: "Circular Std";
-font-size: 1.4375rem;
-font-style: normal;
-font-weight: 700;
-line-height: 120%; 
 }
+.card_content_star {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  .number {
+    color: var(--Orange, #ff5722);
+    /* H6 */
+    font-family: "Circular Std";
+    font-size: 1.4375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
   }
+}
+@include tablet {
+  .destination {
+    display: inline-flex;
+    padding: 4rem 0rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4.1875rem;
+    text-align: center;
+    width: 100%;
+
+    &_header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+
+      &_left {
+        .hightlight {
+          margin: auto;
+        }
+        .normal {
+          margin: auto;
+        }
+      }
+    }
+    &_card_group{
+      display: flex;
+      width: 56rem;
+      align-items: flex-start;
+      gap: 1.9375rem;
+      margin: 0 4rem;
+      margin:auto;
+
+      .card{
+        display: flex;
+        height: 35.9375rem;
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 1 0 0;
+
+        &_img{
+          width: 17.375rem;
+          height: 19.625rem;
+        }
+        .card_content_derc_1{
+          display: flex;
+          flex-direction: column;
+
+          .cost{
+            order: -1;
+          }
+          .where{
+            display: flex;
+            float: left;
+            text-align: left;
+          }
+        }
+      }
+    }
+    
+  }
+}
