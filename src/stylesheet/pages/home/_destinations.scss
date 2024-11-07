@@ -183,11 +183,11 @@
     }
     &_card_group{
       display: flex;
-      width: 56rem;
       align-items: flex-start;
       gap: 1.9375rem;
       margin: 0 4rem;
-      margin:auto;
+      margin:0 4rem;
+      width: 100%;
 
       .card{
         display: flex;
