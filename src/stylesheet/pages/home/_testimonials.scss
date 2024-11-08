@@ -20,15 +20,13 @@
     width: var(--width-value);
     align-items: center;
     gap: 3.5rem;
-     
-    
-      &_footer{
-        display: flex;
-        align-items: flex-start;
-        gap: 1.5rem;
-      }
-    
-     
+
+    &_footer {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+
     &_left {
       width: 6.25rem;
       height: 6.25rem;
@@ -94,7 +92,7 @@
           font-weight: 700;
           line-height: 120%;
 
-          span{
+          span {
             color: var(--Orange, #ff5722);
             text-align: center;
 
@@ -105,40 +103,88 @@
             line-height: 120%; /* 2.1rem */
           }
         }
-        
-        &_rating{
+
+        &_rating {
           display: flex;
-justify-content: center;
-align-items: flex-start;
-gap: 1rem;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 1rem;
         }
       }
 
       &_decr {
         color: var(--Grey-Scale-Black-75, rgba(25, 24, 37, 0.75));
-text-align: center;
-font-family: "Circular Std";
-font-size: 1.4375rem;
-font-style: normal;
-font-weight: 450;
-line-height: 160%; /* 2.3rem */
+        text-align: center;
+        font-family: "Circular Std";
+        font-size: 1.4375rem;
+        font-style: normal;
+        font-weight: 450;
+        line-height: 160%; /* 2.3rem */
       }
     }
-
-   
   }
 }
 .btn_left {
-          width: 6.25rem;
-          height: 6.25rem;
-          position: relative;
-        }
-        .arrow {
-          position: absolute;
-          top: 2.39rem;
-          left: 2.28rem;
-          width: 1.5rem;
-          height: 1.5rem;
-          flex-shrink: 0;
-        }
+  width: 6.25rem;
+  height: 6.25rem;
+  position: relative;
+}
+.arrow {
+  position: absolute;
+  top: 2.39rem;
+  left: 2.28rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
 
+
+
+@include tablet{
+  .testimonials{
+    margin: auto;
+    width: 100%;
+
+    &_layer{
+      margin: auto;
+      width: 100%;
+      position: absolute;
+      top: -15rem;
+       
+      &_image{
+        margin: auto;
+        width: 100%;
+      }
+    }
+    &_main{
+      margin: 0 4rem;
+      width: 90%;
+      position: absolute;
+      top: -1.5rem;
+    }
+  }
+}
+@include mobile{
+  .testimonials{
+    margin: auto;
+    width: 100%;
+
+    &_layer{
+      display: none;
+    }
+    &_main{
+      margin: auto;
+      width: 110%;
+      position: absolute;
+      top: -1.5rem;
+
+    }
+
+    .btn_left{
+      transform: translateY(30rem);
+    }
+    .testimonials_main_left{
+      transform: translateY(30rem);
+    }
+  }
+}

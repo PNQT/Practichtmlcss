@@ -7,7 +7,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 4rem;
-  margin: 10rem auto;
+  margin: 10rem 8rem;
   
   border-radius: 2rem;
   background: rgba(250, 205, 73, 0.08);
@@ -103,5 +103,36 @@
           }
         }
       }
+  }
+}
+@include tablet {
+  .subcribe{
+    width: 80%;
+    margin: -17rem 4rem;
+   
+   
+
+  }
+}
+@include mobile {
+  .subcribe{
+     width: 100%;
+     margin: 0 2rem;
+     display: flex;
+     padding: 4rem 2rem;
+     flex-direction: column;
+     align-items: flex-start;
+     gap: 4rem;
+     align-self: stretch;
+     height: 688px;
+
+     &_content_bot{
+      display: flex;
+      flex-direction: column;
+
+      &_input{
+        height: 4rem;
+      }
+     }
   }
 }
