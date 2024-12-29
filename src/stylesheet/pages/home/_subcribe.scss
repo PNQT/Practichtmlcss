@@ -107,32 +107,30 @@
 }
 @include tablet {
   .subcribe{
-    width: 80%;
-    margin: -17rem 4rem;
-   
-   
+    margin: 0 4rem;
+    width: auto;  
 
   }
 }
 @include mobile {
-  .subcribe{
-     width: 100%;
-     margin: 0 2rem;
-     display: flex;
-     padding: 4rem 2rem;
-     flex-direction: column;
-     align-items: flex-start;
-     gap: 4rem;
-     align-self: stretch;
-     height: 688px;
-
-     &_content_bot{
+  .subcribe {
+    margin: 0 1rem;
+    display: flex;
+    padding: 4rem 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4rem;
+    align-self: stretch;
+    margin-top: -5rem;
+    height: calc(100vh + 4rem); 
+    &_content_bot {
       display: flex;
       flex-direction: column;
+      gap: 2rem;
+    }
 
-      &_input{
-        height: 4rem;
-      }
-     }
+    &_content_header {
+      gap: 2rem;
+    }
   }
 }

@@ -166,25 +166,27 @@
 }
 @include mobile{
   .testimonials{
-    margin: auto;
-    width: 100%;
+    margin: 0 1rem;
 
     &_layer{
       display: none;
     }
     &_main{
       margin: auto;
-      width: 110%;
       position: absolute;
       top: -1.5rem;
 
     }
 
     .btn_left{
-      transform: translateY(30rem);
+      right: 0;
+      position: absolute;
+      bottom: -9rem;
     }
     .testimonials_main_left{
-      transform: translateY(30rem);
+      left: 0;
+      position: absolute;
+      bottom: -9rem;
     }
   }
 }
