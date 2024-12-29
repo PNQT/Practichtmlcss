@@ -184,11 +184,11 @@
     }
     &_card_group{
       display: flex;
-      width: 56rem;
       align-items: flex-start;
       gap: 1.9375rem;
       margin: 0 4rem;
-      margin:auto;
+      width: 100%;
+
 
       .card{
         display: flex;
@@ -197,10 +197,6 @@
         align-items: flex-start;
         flex: 1 0 0;
 
-        &_img{
-          width: 17.375rem;
-          height: 19.625rem;
-        }
         .card_content_derc_1{
           display: flex;
           flex-direction: column;
@@ -218,4 +214,39 @@
     }
     
   }
+}
+@include mobile {
+    .destination{
+      margin-top: -3rem;
+      width: 100%;
+      height: 100%;
+     
+        &_card_group{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          margin: 2rem;
+
+
+          .card{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            align-self: stretch;
+            margin-top: 2rem;
+            padding: 0.5rem;
+
+           
+
+            &_content {
+              border-radius: 0px 0px 32px 32px;
+              background: #FFF;
+              box-shadow: 0px 801px 224px 0px rgba(0, 0, 0, 0.00), 0px 513px 205px 0px rgba(0, 0, 0, 0.01), 0px 288px 173px 0px rgba(0, 0, 0, 0.03), 0px 128px 128px 0px rgba(0, 0, 0, 0.04), 0px 32px 71px 0px rgba(0, 0, 0, 0.05), 0px 0px 0px 0px rgba(0, 0, 0, 0.05);
+            }
+          }
+          .noti{
+            margin-top: 4rem
+          }
+        }
+    }
 }
