@@ -179,13 +179,11 @@
     flex-direction: column;
     text-align: center;
     width: 100%;
-    margin: 0 4rem;
+    margin: 0 1rem;
 
     &_image {
       order: -1;
-      margin: auto;
-    
-      
+      margin: auto;     
     }
     &_card{
        display: flex;
