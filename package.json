@@ -7,7 +7,6 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html",
     "posthtml": "posthtml src/index.html -o dist/index.html"
   },
   "devDependencies": {
