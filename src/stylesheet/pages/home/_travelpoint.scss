@@ -126,11 +126,14 @@
 }
 
 @include tablet {
+  .frame50{
+    display: none;
+  }
   .travelpoint {
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 100%;
+    width: 90%;
     margin: 0 4rem;
 
     &_image {
@@ -184,6 +187,18 @@
     &_image {
       order: -1;
       margin: auto;     
+    }
+    &_content{
+       margin: 0 1rem;
+
+       &_header_text{
+         margin: 0 1rem;
+       }
+       &_header_decr{
+         margin: 0 3rem;
+       }
+
+
     }
     &_card{
        display: flex;

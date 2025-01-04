@@ -186,7 +186,7 @@
       display: flex;
       align-items: flex-start;
       gap: 1.9375rem;
-      margin: 0 4rem;
+      margin: 0 auto;
       width: 100%;
 
 
@@ -225,7 +225,7 @@
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          margin: 2rem;
+          margin: 0 2rem;
 
 
           .card{
@@ -234,9 +234,7 @@
             align-items: flex-start;
             align-self: stretch;
             margin-top: 2rem;
-            padding: 0.5rem;
-
-           
+            padding: 0rem;         
 
             &_content {
               border-radius: 0px 0px 32px 32px;
@@ -245,7 +243,8 @@
             }
           }
           .noti{
-            margin-top: 4rem
+            margin-top: 4rem;
+            margin-bottom: 2rem;
           }
         }
     }
