@@ -121,15 +121,15 @@
 
 @include tablet {
   .feature {
-    width: 100%;
+    width: 90%;
     flex-direction: column;
     display: flex;
     margin: 0 4rem;
 
     &_image {
       order: 1;
-      width: 100%;
-      height: 100%;
+      width: 90%;
+      height: 80%;
     }
     &_content {
       order: 2;
@@ -146,7 +146,12 @@
           margin: 0 3rem;
         }
       }
+      
     }
+    &_card {
+      width: 100%;
+      
+   }
   }
 }
 

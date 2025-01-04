@@ -165,6 +165,9 @@
   }
 }
 @include mobile{
+  .objects1{
+     display: none;
+  }
   .testimonials{
     margin: 0 1rem;
 
