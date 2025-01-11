@@ -1,0 +1,11 @@
+@use "../abstracts/" as *;
+
+.container {
+     max-width: 1200px; 
+}
+
+@include mobile {
+     .container {
+          width: 100%;
+     }
+}

@@ -44,15 +44,23 @@
       gap: 2rem;
       width: 14.5rem;
       height: 6.25rem;
-
+      
+      .btn_right:hover{
+        cursor: pointer;
+      }
       img {
         width: 6.25rem;
         height: 6.25rem;
+        
       }
       .btn_left {
         width: 6.25rem;
         height: 6.25rem;
         position: relative;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
       .arrow {
         position: absolute;
@@ -68,60 +76,96 @@
   &_card_group {
     display: flex;
     align-items: flex-start;
-    gap: 2rem;
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
     align-self: stretch;
-  }
-}
-.card {
-  display: flex;
-  height: 35.9375rem;
-  flex-direction: column;
-  align-items: flex-start;
-  flex: 1 0 0;
-  border: none;
+    width: 90%;
+    margin: 0 auto;
 
-  img {
-    flex: 1 0 0;
-    align-self: stretch;
-    border-radius: 2rem 2rem 0rem 0rem;
-  }
 
-  &_content {
-    display: flex;
-    padding: 2rem;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2rem;
-    align-self: stretch;
-    border-radius: 0rem 0rem 2rem 2rem;
-    background: #fff;
-    box-shadow: 0px 801px 224px 0px rgba(0, 0, 0, 0),
-      0px 513px 205px 0px rgba(0, 0, 0, 0.01), 0px 288px 173px 0px rgba(0, 0, 0, 0.03),
-      0px 128px 128px 0px rgba(0, 0, 0, 0.04), 0px 32px 71px 0px rgba(0, 0, 0, 0.05),
-      0px 0px 0px 0px rgba(0, 0, 0, 0.05);
-
-    &_derc {
+    .card {
+      background: border-box;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 1rem;
-      align-self: stretch;
-
-      &_1 {
-        display: flex;
-        align-items: flex-start;
+      flex: 1;
+      border: none;
+    
+      &:hover{
+        cursor: pointer;
+        box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05), 0px 8px 16px 0px rgba(0, 0, 0, 0.05), 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+        transition: box-shadow 0.3s ease-in-out;
+      }
+      img {
+        flex: 1 0 0;
         align-self: stretch;
-
-        .where {
-          flex: 1 0 0;
-          font-family: "Circular Std";
-          font-size: 1.4375rem;
-          font-style: normal;
-          font-weight: 700;
-          line-height: 120%;
+        border-radius: 2rem 2rem 0rem 0rem;
+        // object-fit: cover;
+      }
+    
+      &_content {
+        justify-content: space-between;
+        display: flex;
+        padding: 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        align-self: stretch;
+        border-radius: 0rem 0rem 2rem 2rem;
+        background: #fff;
+        box-shadow: 0px 801px 224px 0px rgba(0, 0, 0, 0),
+          0px 513px 205px 0px rgba(0, 0, 0, 0.01), 0px 288px 173px 0px rgba(0, 0, 0, 0.03),
+          0px 128px 128px 0px rgba(0, 0, 0, 0.04), 0px 32px 71px 0px rgba(0, 0, 0, 0.05),
+          0px 0px 0px 0px rgba(0, 0, 0, 0.05);
+    
+        &_derc {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1rem;
+          align-self: stretch;
+    
+          &_1 {
+            display: flex;
+            align-items: flex-start;
+            align-self: stretch;
+    
+            .where {
+              flex: 1 0 0;
+              font-family: "Circular Std";
+              font-size: 1.4375rem;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 120%;
+            }
+            .cost {
+              color: var(--Secondary, #f85e9f);
+              /* H6 */
+              font-family: "Circular Std";
+              font-size: 1.4375rem;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 120%;
+            }
+          }
+          &_2 {
+            color: var(--Secondary, #f85e9f);
+            /* H6 */
+            font-family: "Circular Std";
+            font-size: 1.4375rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%;
+          }
         }
-        .cost {
-          color: var(--Secondary, #f85e9f);
+      }
+      &_content_star {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        .number {
+          color: var(--Orange, #ff5722);
           /* H6 */
           font-family: "Circular Std";
           font-size: 1.4375rem;
@@ -130,49 +174,28 @@
           line-height: 120%;
         }
       }
-      &_2 {
-        color: var(--Secondary, #f85e9f);
-        /* H6 */
-        font-family: "Circular Std";
-        font-size: 1.4375rem;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 120%;
-      }
     }
   }
 }
-.card_content_star {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  .number {
-    color: var(--Orange, #ff5722);
-    /* H6 */
-    font-family: "Circular Std";
-    font-size: 1.4375rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 120%;
-  }
-}
+
+
 @include tablet {
   .destination {
     display: inline-flex;
-    padding: 4rem 0rem;
+    padding: 4rem 0;
     flex-direction: column;
     align-items: flex-start;
     gap: 4.1875rem;
     text-align: center;
     width: 100%;
-
+  
     &_header {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 4rem;
-
+  
       &_left {
         .hightlight {
           margin: auto;
@@ -182,29 +205,39 @@
         }
       }
     }
-    &_card_group{
-      display: flex;
-      align-items: flex-start;
-      gap: 1.9375rem;
+  
+    &_card_group {
       margin: 0 auto;
-      width: 100%;
-
-
-      .card{
-        display: flex;
-        height: 35.9375rem;
-        flex-direction: column;
-        align-items: flex-start;
-        flex: 1 0 0;
-
-        .card_content_derc_1{
+      width: 90%;
+      gap: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(18.5rem, 1fr));
+      justify-content: center; 
+      align-content: center; 
+  
+      .card {
+       
           display: flex;
           flex-direction: column;
+          align-items: center;
+          gap: 2rem;
+          align-self: stretch;
+          min-height: 585px;
 
-          .cost{
+          img{
+            object-fit: cover;
+          }
+
+         
+  
+        .card_content_derc_1 {
+          display: flex;
+          flex-direction: column;
+  
+          .cost {
             order: -1;
           }
-          .where{
+          .where {
             display: flex;
             float: left;
             text-align: left;
@@ -212,20 +245,19 @@
         }
       }
     }
-    
   }
 }
 @include mobile {
     .destination{
       margin-top: -3rem;
-      width: 100%;
-      height: 100%;
+      // width: 100%;
+      // height: 100%;
      
         &_card_group{
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          margin: 0 2rem;
+          margin: auto;
 
 
           .card{

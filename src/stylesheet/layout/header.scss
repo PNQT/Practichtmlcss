@@ -1,19 +1,13 @@
 @use "../abstracts/" as *;
 
-
-@use "../abstracts/" as *;
-
-.container {
+.header {
   display: flex;
-  height:  7.06rem;
+  height: 7.06rem;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto ;
-  padding:2rem 0rem;
-  width:var(--width-value);
-
-
-
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  width: var(--width-value);
 }
 .logo {
   display: flex;
@@ -58,7 +52,6 @@
   align-items: flex-start;
   width: 26.75rem;
 
-
   .nav_item {
     .nav_link {
       color: var(--Grey-Scale-Black-50, rgba(25, 24, 37, 0.5));
@@ -66,7 +59,7 @@
       font-family: "Circular Std";
       font-size: 0.875rem;
       font-style: normal;
-      font-weight: 700;
+      font-weight: 500;
       line-height: 120%;
 
       &.active {
@@ -79,36 +72,64 @@
     }
   }
 }
+
 .button_group {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
   height: 3.0625rem;
   margin: 2rem 0rem;
-  .btn_login {
-    border-radius: 6.25rem;
-    background: var(--white, #fff);
 
-    &_content {
-      display: flex;
-      text-align: center;
-      align-items: center;
-      color: var(--Dark, #222831);
+  .btn_login {
+    border: transparent;
+    border-radius: 6.25rem;
+    background: transparent;
+    color: var(--Dark, #222831);
+    padding: 0.5rem 1rem;
+    font-family: "Circular Std";
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: var(--Grey-Scale-Black-10, #f0f0f0);
+    }
+
+    &:active {
+      background-color: var(--Grey-Scale-Black-30, #d9d9d9);
     }
   }
+
   .btn_signup {
     border: none;
     border-radius: 6.25rem;
     background: var(--Primary, #5d50c6);
+    color: var(--Light, #ffffff);
+    padding: 0.5rem 1.5rem;
+    font-family: "Circular Std";
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 
-    &_content {
-      color: var(--Light, #eee);
+    &:hover {
+      background-color: var(--Primary-Hover, #4b41a6);
+    }
+
+    &:active {
+      background-color: var(--Primary-Active, #3c3485);
     }
   }
 }
 
 @include tablet {
-  .container {
+  .header {
     width: 100%;
+    padding: auto;
   }
   .navbar {
     display: none;
@@ -127,7 +148,7 @@
 }
 
 @include mobile {
-  .container {
+  .header {
     width: 100%;
     padding: 1rem 0rem;
   }

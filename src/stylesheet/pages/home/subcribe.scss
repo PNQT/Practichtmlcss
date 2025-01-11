@@ -11,6 +11,7 @@
   
   border-radius: 2rem;
   background: rgba(250, 205, 73, 0.08);
+  margin-left: -2rem;
 
   &_content {
     display: flex;
@@ -70,15 +71,23 @@
           background: var(--white, #fff);
 
           &_text {
+            border: none;
+            width: 100%;
+            height: 170%;
             color: var(--Grey-Scale-Black-75, rgba(25, 24, 37, 0.75));
-            text-align: center;
+            text-align: left;
 
             /* H6 */
             font-family: "Circular Std";
-            font-size: 1.4375rem;
+            font-size: 1.7375rem;
             font-style: normal;
             font-weight: 700;
-            line-height: 120%; /* 1.725rem */
+            line-height: 150%; /* 1.725rem */
+
+            &:focus{
+              border: none;
+              outline: none;
+            }
           }
         }
 
@@ -100,6 +109,10 @@
             font-style: normal;
             font-weight: 700;
             line-height: 120%; /* 1.725rem */
+          }
+
+          &:hover {
+            cursor: pointer;
           }
         }
       }

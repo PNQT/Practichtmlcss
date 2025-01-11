@@ -7,6 +7,7 @@
   align-items: flex-start;
   gap: 4.375rem;
   margin: 0rem 0rem 0rem 8rem;
+  margin-left: -2rem;
 
   &_content {
     display: flex;
@@ -80,11 +81,13 @@
       align-self: stretch;
       border-radius: 2rem;
       background: var(--white, #fff);
+      z-index: 9999999999999999;
       
       .border{
         border-radius: 2rem;
         background: var(--white, #FFF);
       }
+      
       &_content {
         h6 {
           color: var(--Grey-Scale-Black, #191825);
@@ -110,6 +113,9 @@
         width: 6.25rem;
         height: 6.25rem;
       }
+      // &:hover {
+      //   background: var(--light-grey, #f2f2f2);
+      // }
     }
   }
   &_image {

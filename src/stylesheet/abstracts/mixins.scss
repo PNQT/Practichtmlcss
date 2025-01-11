@@ -1,0 +1,58 @@
+@use "variables" as *;
+@use "functions" as *;
+
+// Media-Query Mixin
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin middle {
+  @media screen and (max-width: 950px) {
+    @content;
+  }
+}
+
+@mixin large  {
+  @media screen and (max-width: 550px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media screen and (max-width: 430px) {
+    @content;
+  }
+}
+
+@mixin marginComponent($parent) {
+  .#{$parent} {
+    @media screen and (max-width: 950px) {
+      margin-top: 7rem;
+      @content;
+    }
+    @include mobile {
+       margin-top:13rem ;
+    }
+    @media screen and (max-width: 550px) {
+      margin-top: 22rem;
+      @content;
+    }
+    @media screen and (max-width: 430px) {
+      margin-top: 28rem;
+      @content;
+    }
+
+  }
+}
+
+// Sử dụng mixin cho các lớp cha khác nhau
+@include marginComponent('explore');
+@include marginComponent('colabration');

@@ -1,34 +1,22 @@
-<header class="container" >      
+<header class="header" >      
         <div class="logo">
           <a class="logo_image" href="#">
             <img src="./assets/icons/logo.svg" />
-            <h3 class="logo_name">Travlog</h3>
+            <h1 class="logo_name">Travlog</h1>
           </a>
         </div>
         <img src="assets/icons/menu.111.svg" class="toggle" />
-        <ul class="navbar">
-          <li class="nav_item">
-           <a class="nav_link active" href="#"> Home </a>
-          </li>
-          <li class="nav_item">
-            <a class="nav_link" href="#"> Discover </a>
-          </li>
-          <li class="nav_item">
-            <a class="nav_link" href="#"> Special Deals </a>
-          </li>
-          <li class="nav_item">
-            <a class="nav_link" href="#"> Contact </a>
-          </li>
+
+        <ul class="navbar"> 
+          <include src="components/nav_list.html"  locals='{"name":"Home", "className":"active"}'></include>
+          <include src="components/nav_list.html"  locals='{"name":"Discover", "className":""}'></include>
+          <include src="components/nav_list.html"  locals='{"name":"Special Deals", "className":""}'></include>
+          <include src="components/nav_list.html"  locals='{"name":"Contact", "className":""}'></include>
         </ul>
-  
-        <div class="button_group">
-            <button class="btn btn_login" href="#">
-              <h6 class="btn btn_login_content">Log In</h6>
-            </button>
-      
-            <button class="btn_signup">
-              <h6 class="btn btn_signup_content">Sign Up</h6>
-          </button>
+    
+        <div class="button_group">        
+            <button class=" btn_login">Log In</button>     
+            <button class=" btn_signup">Sign Up</button>         
         </div>
   </header>
   

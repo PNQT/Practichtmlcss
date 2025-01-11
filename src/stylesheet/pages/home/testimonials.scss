@@ -5,6 +5,7 @@
   margin-top: -450px;
   height: 60rem;
   position: relative;
+  margin-left: -8rem;
 
   &_layer {
     z-index: -99;
@@ -31,6 +32,11 @@
       width: 6.25rem;
       height: 6.25rem;
       flex-shrink: 0;
+
+      :hover {
+        cursor: pointer;
+      }
+      
     }
 
     &_content {
@@ -121,6 +127,12 @@
         font-weight: 450;
         line-height: 160%; /* 2.3rem */
       }
+
+      &_footer {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
     }
   }
 }
@@ -128,6 +140,10 @@
   width: 6.25rem;
   height: 6.25rem;
   position: relative;
+
+  :hover {
+    cursor: pointer;
+  }
 }
 .arrow {
   position: absolute;

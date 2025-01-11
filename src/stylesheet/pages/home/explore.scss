@@ -2,7 +2,7 @@
 
 .explore {
   display: flex;
-  padding: 4rem 0rem;
+  padding: 0rem 2rem;
   align-items: center;
   margin: 0 auto;
   width: var(--width-value);
@@ -27,7 +27,10 @@
         0px 548px 219px 0px rgba(0, 0, 0, 0.01), 0px 308px 185px 0px rgba(0, 0, 0, 0.04),
         0px 137px 137px 0px rgba(0, 0, 0, 0.06), 0px 34px 75px 0px rgba(0, 0, 0, 0.07),
         0px 0px 0px 0px rgba(0, 0, 0, 0.07);
-
+      
+        &:hover{
+          cursor: pointer;
+        }
       &_name {
         color: var(--Secondary, #f85e9f);
         /* Button */
@@ -44,7 +47,7 @@
       color: #000;
       /* H1 */
       font-family: "Circular Std";
-      font-size: 4.3125rem;
+      font-size: 3.7rem;
       font-style: normal;
       font-weight: 700;
       line-height: 120%;
@@ -53,7 +56,7 @@
         color: var(--Secondary, #f85e9f);
         /* H1 */
         font-family: "Circular Std";
-        font-size: 4.3125rem;
+        font-size: 3.7rem;
         font-style: normal;
         font-weight: 700;
         line-height: 120%;
@@ -62,7 +65,7 @@
     &_decr {
       color: var(--Grey-Scale-Black-50, rgba(25, 24, 37, 0.5));
       /* Body */
-      font-family: Inter;
+      // font-family: Inter;
       font-size: 1.125rem;
       font-style: normal;
       font-weight: 400;
@@ -74,6 +77,7 @@
       gap: 1rem;
 
       .btn_getstarted {
+        border: none;
         width: 8.8125rem;
         height: 3.0625rem;
         border-radius: 6.25rem;
@@ -101,7 +105,13 @@
           font-style: normal;
           font-weight: 700;
           line-height: 120%;
+          padding: 0;
         }
+      }
+      .btn_watchdemo{
+        border: none;
+        background: border-box;
+        width: 200px;
       }
     }
   }
@@ -204,12 +214,22 @@
         img {
           width: 17rem;
           height: 18.75rem;
+
+          &:hover{
+            transform: scale(1.1);
+            cursor: pointer;
+          }
         }
       }
       .imgright {
         img {
           width: 17rem;
           height: 25rem;
+
+          &:hover{
+            transform: scale(1.1);
+            cursor: pointer;
+          }
         }
       }
     }
@@ -230,6 +250,10 @@
       height: 4rem;
       top: 21.3rem;
       left: 3.5rem;
+
+      &:hover{
+        cursor: pointer;
+      }
     }
     .btn-adduser {
       position: absolute;
@@ -245,6 +269,10 @@
       box-shadow: 0px 120px 34px 0px rgba(0, 0, 0, 0),
         0px 77px 31px 0px rgba(0, 0, 0, 0.01), 0px 43px 26px 0px rgba(0, 0, 0, 0.05),
         0px 19px 19px 0px rgba(0, 0, 0, 0.09);
+
+        &:hover{
+          cursor: pointer;
+        }
     }
     .topplace {
       position: absolute;
@@ -261,6 +289,10 @@
       box-shadow: 0px 120px 34px 0px rgba(0, 0, 0, 0),
         0px 77px 31px 0px rgba(0, 0, 0, 0.01), 0px 43px 26px 0px rgba(0, 0, 0, 0.05);
 
+        &:hover{
+          cursor: pointer;
+        }
+        
       &_text {
         color: var(--Medium, #393e46);
         /* Button */
@@ -310,18 +342,24 @@
 }
 
 @include tablet {
+  .ellipse23{
+     display: block;
+  }
   .explore {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: auto;
     width: 100%;
     &_left {
       order: 2;
       text-align: center;
+      scale: 1.4;
+      margin-top: 7rem;
+      
 
       &_title {
         margin: auto;
+
       }
       &_groupbutton {
         margin: auto;
@@ -335,233 +373,37 @@
       order: 1;
       margin-bottom: 2rem;
       text-align: center;
+      // scale: 1.2;
     }
   }
+}
+@include middle {
+  .explore{
+     scale: 0.8;
+     margin-top: -7rem;
+  }
+  
 }
 @include mobile {
-  .explore {
-    display: flex;
-    padding: 2rem 0rem;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-
-    &_right {
-      width: 24.76788rem;
-      height: 22.875rem;
-      margin: auto;
-      position: relative;
-
-      &_layer {
-        width: 24.76788rem;
-        height: 9.22006rem;
-        flex-shrink: 0;
-        position: relative;
-
-        .earth {
-          width: 21.18206rem;
-          height: 8.58788rem;
-          flex-shrink: 0;
-
-          position: absolute;
-          top: 0.56rem;
-          right: 2.1rem;
-        }
-        .location {
-          width: 0.54444rem;
-          height: 0.7935rem;
-          flex-shrink: 0;
-
-          position: absolute;
-          left: 21.8rem;
-          top: 2.5rem;
-         }
-        .line2 {
-          width: 12.54581rem;
-          height: 5.67119rem;
-          flex-shrink: 0;
-
-          position: absolute;
-          top: 0.05rem;
-          left: 6.77rem;
-        }
-        .line1 {
-          width: 7.39131rem;
-          height: 6.79769rem;
-          flex-shrink: 0;
-
-          position: absolute;
-          top: 2.02rem;
-          left: 0;
-        }
-        .line3 {
-          width: 4.07725rem;
-          height: 7.07269rem;
-          flex-shrink: 0;
-
-          position: absolute;
-          top: 0.74rem;
-          right: 0;
-        }
-        .plane3 {
-          width: 1.25713rem;
-          height: 1.06738rem;
-          flex-shrink: 0;
-
-          position: absolute;
-          top: 0;
-          left: 19.3rem;
-        }
-        .plane2 {
-          width: 1.22469rem;
-          height: 1.02894rem;
-          flex-shrink: 0;
-
-          position: absolute;
-          top: 5.54rem;
-          left: 15.6rem;
-        }
-        .plane1 {
-          width: 1.12631rem;
-          height: 1.01575rem;
-          flex-shrink: 0;
-
-          position: absolute;
-          top: 1.07rem;
-          left: 3.25rem;
-        }
-      }
-      &_groupimg {
-        display: flex;
-        width: 18.44756rem;
-        height: 20.27631rem;
-        align-items: center;
-        gap: 0.99456rem;
-        flex-shrink: 0;
-
-        .imgleft {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 1.02663rem;
-
-          .imgleftcon {
-            width: 8.7265rem;
-            height: 9.62481rem;
-          }
-        }
-
-        .imgright {
-          width: 8.7265rem;
-          height: 12.83313rem;
-          flex-shrink: 0;
-
-          .imgrightcon {
-            width: 8.7265rem;
-            height: 12.83313rem;
-          }
-        }
-      }
-      .btn-send {
-        display: flex;
-        width: 2.05331rem;
-        height: 2.05331rem;
-        padding: 0.51331rem;
-        align-items: flex-start;
-        gap: 0.25669rem;
-        flex-shrink: 0;
-        position: absolute;
-        top: 13.15rem;
-        left: 4.8rem;
-
-        .send1 {
-          width: 1.02663rem;
-          height: 1.02663rem;
-          flex-shrink: 0;
-        }
-      }
-      .btn-adduser {
-        display: flex;
-        width: 2.05331rem;
-        height: 2.05331rem;
-        padding: 0.51331rem;
-        align-items: flex-start;
-        gap: 0.25669rem;
-        flex-shrink: 0;
-
-        position: absolute;
-        bottom: -2.5rem;
-        left: 18rem;
-    
-
-
-        .adduser {
-          width: 1.02663rem;
-          height: 1.02663rem;
-          flex-shrink: 0;
-        }
-      }
-    }
-    .topplace {
-      display: flex;
-      width: 5.32575rem;
-      height: 1.79663rem;
-      padding: 0.51331rem 1.02663rem;
-      align-items: center;
-      gap: 0.25669rem;
-      flex-shrink: 0;
-
-      position: absolute;
-      top: 15.7rem;
-      left: 21.8rem;
-      .location1 {
-        width: 0.77rem;
-        height: 0.77rem;
-        flex-shrink: 0;
-      }
-      .topplace_text {
-        color: var(--Medium, #393e46);
-        font-family: "Circular Std";
-        font-size: 0.44919rem;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 120%; 
-      }
-    }
-    &_left {
-      order: 2;
-      text-align: center;
-      width: 90%;
-      margin: 1rem 0;
-
-      &_title {
-        margin: auto;
-      }
-
-      &_groupbutton {
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        width: 100%;
-
-        .btn_getstarted {
-          width: 100%;
-        }
-        .btn_watchdemo {
-          width: 100%;
-          .icondemo {
-            display: none;
-          }
-          .watchdemo {
-            margin: auto;
-          }
-        }
-      }
-    }
-
-    &_right {
-      order: 1;
-      margin: auto;
-    }
+  .ellipse23{
+    display: none;
+   
+ }
+ .explore{
+  scale: 0.65;
+  margin-top: -15rem;
+}
+}
+@include large {
+  .explore{
+    scale: 0.5;
+    margin-top: -22rem;
   }
 }
+@include small {
+  .explore{
+    scale: 0.4;
+    margin-top: -28rem;
+  }
+}
+
